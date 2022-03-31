@@ -353,8 +353,8 @@ export default {
       documentType: { required },
       passportDate: { required },
 
-      docSeries: { numeric, length: (val) => val.length === 4 },
-      docNumber: { numeric, length: (val) => val.length === 6 },
+      // docSeries: { numeric, length: (val) => val.length === 4 },
+      // docNumber: { numeric, length: (val) => val.length === 6 },
     },
   },
   methods: {
