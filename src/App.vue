@@ -37,11 +37,6 @@ export default {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 992px) {
-  .input-row {
-  }
-}
-
 html,
 body {
   font-size: 14px;

@@ -1,5 +1,5 @@
 <template>
-  <form class="create-user-form" @submit.prevent="submitHandler">
+  <form class="create-user-form" @submit.prevent="">
     <fieldset class="fieldset">
       <h3>Основная информация</h3>
       <div class="input-row">
@@ -268,7 +268,12 @@
         />
       </div>
       <div class="input-row"></div>
-      <base-button type="Submit" text="Создать нового клиента"> </base-button>
+      <base-button
+        class="submitButton"
+        text="Создать нового клиента"
+        @click="submitHandler"
+      >
+      </base-button>
 
       <div class="input-row"></div>
     </fieldset>
@@ -387,6 +392,12 @@ export default {
       margin-top: 16px;
     }
   }
+}
+
+.submitButton {
+  --button-width: 47%;
+  --button-height: 44px;
+  --button-font-size: 1rem;
 }
 
 .fieldset {
