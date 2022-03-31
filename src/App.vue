@@ -1,28 +1,53 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <h1>Создание нового клиента</h1>
+    </div>
+    <hr />
+    <div class="container">
+      <create-user-form />
+    </div>
+    <hr />
+    <div class="container"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CreateUserForm from './components/CreateUserForm.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
-  }
+    CreateUserForm,
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@import '@/scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .input-row {
+  }
+}
+
+html,
+body {
+  font-size: 14px;
+  font-family: $font-family;
+  color: $font-color;
+  margin: 0;
+  padding: 0;
 }
 </style>
